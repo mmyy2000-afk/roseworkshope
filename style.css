@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+
+:root{
+  --bg:#050105;
+  --panel:rgba(22,8,15,.72);
+  --text:#fff4f5;
+  --muted:#c8aeb5;
+  --red:#ed1736;
+  --red2:#ff5265;
+  --green:#159447;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; min-height:100vh; color:var(--text); background:
+  radial-gradient(circle at 50% 30%,#25050c 0,transparent 35%),
+  radial-gradient(circle at 20% 80%,#17040a 0,transparent 28%),
+  var(--bg);
+  font-family:Cairo,system-ui,sans-serif;
+  overflow-x:hidden;
+}
+body:before{
+  content:""; position:fixed; inset:0; pointer-events:none; opacity:.5;
+  background-image:radial-gradient(#fff 1px,transparent 1px);
+  background-size:85px 85px;
+  mask-image:linear-gradient(to bottom,transparent,black 20%,black 75%,transparent);
+}
+.page{width:min(920px,100%);margin:auto;padding:44px 20px 28px}
+.hero{text-align:center;position:relative;z-index:2}
+.eyebrow{font-size:11px;letter-spacing:.42em;color:#bba0a8}
+h1{font-size:clamp(34px,7vw,64px);margin:12px 0 6px;font-weight:700}
+h1 span{filter:drop-shadow(0 0 10px rgba(255,30,55,.45))}
+.hero p{margin:0;color:var(--muted);font-size:15px}
+
+.garden{
+  position:relative;height:min(68vh,650px);min-height:500px;margin:28px auto 0;
+  overflow:hidden;border:1px solid rgba(255,255,255,.08);border-radius:36px;
+  background:radial-gradient(circle at 50% 45%,rgba(100,5,20,.34),transparent 38%),
+             linear-gradient(#060105,#0b0207);
+  box-shadow:inset 0 0 80px rgba(160,0,25,.08),0 30px 90px rgba(0,0,0,.35);
+}
+.glow{position:absolute;width:260px;height:260px;left:50%;top:27%;transform:translate(-50%,-50%);
+  background:#c60024;filter:blur(75px);opacity:.12}
+.moon{position:absolute;right:8%;top:8%;width:44px;height:44px;border-radius:50%;
+  background:#fff2f0;box-shadow:0 0 30px rgba(255,235,235,.28)}
+.moon:after{content:"";position:absolute;left:-9px;top:-5px;width:44px;height:44px;border-radius:50%;background:#080207}
+.ground{position:absolute;bottom:-100px;left:50%;width:620px;height:180px;transform:translateX(-50%);
+  border-radius:50%;background:#09020a;box-shadow:0 -10px 60px rgba(20,0,5,.9)}
+#rose{position:absolute;width:min(90%,600px);height:90%;left:50%;bottom:3%;transform:translateX(-50%);
+  overflow:visible;color:var(--green);z-index:2}
+#stem{stroke-dasharray:280;stroke-dashoffset:0}
+#leaf1,#leaf2{transform-box:fill-box;transform-origin:center;opacity:0}
+#bud{transform-box:fill-box;transform-origin:center;opacity:1}
+#particles{position:absolute;inset:0;z-index:4;pointer-events:none}
+.particle{position:absolute;color:#ff3850;font-size:13px;animation:float 2.8s ease-out forwards}
+@keyframes float{0%{opacity:0;transform:translate(0,20px) scale(.5)}20%{opacity:.9}100%{opacity:0;transform:translate(var(--x),-130px) scale(.8) rotate(15deg)}}
+.bloom-caption{position:absolute;bottom:28px;left:0;right:0;text-align:center;z-index:5;opacity:0;transform:translateY(10px);transition:.9s}
+.bloom-caption.show{opacity:1;transform:none}
+.bloom-caption span{display:block;font-size:9px;letter-spacing:.35em;color:#d4aeb7}
+.bloom-caption strong{display:block;margin-top:4px;font:italic 28px "Playfair Display",serif;color:#fff0f2}
+.controls{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin:22px 0}
+button{font:inherit;cursor:pointer;border-radius:16px;padding:12px 20px;transition:.2s}
+button:active{transform:scale(.96)}
+.primary{border:0;background:linear-gradient(135deg,#ff2946,#c90829);color:#fff;box-shadow:0 10px 35px rgba(237,23,54,.2)}
+.primary:hover{filter:brightness(1.1);transform:translateY(-2px)}
+.secondary,.ghost{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.035);color:var(--text)}
+.secondary:hover,.ghost:hover{background:rgba(255,255,255,.08)}
+.hidden{display:none!important}
+.letter{
+  max-width:680px;margin:10px auto 0;padding:30px 26px;border:1px solid rgba(255,255,255,.1);
+  background:linear-gradient(145deg,rgba(35,10,18,.82),rgba(12,3,8,.82));border-radius:28px;
+  box-shadow:0 25px 80px rgba(0,0,0,.3);animation:letterIn .8s ease both;line-height:2}
+@keyframes letterIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.letter-flower{text-align:center;font-size:32px}
+.letter h2{text-align:center;margin:8px 0 18px;font-size:26px}
+.letter p{color:#e8d5da;margin:10px 0}
+.signature{text-align:center;color:#dbaeb8;font:italic 20px "Playfair Display",serif;margin-top:20px}
+footer{text-align:center;color:#6f5960;font-size:11px;margin-top:32px}
+
+@media(max-width:600px){
+  .page{padding:30px 13px 22px}
+  .garden{min-height:470px;height:64vh;border-radius:28px}
+  .moon{width:34px;height:34px}
+  .moon:after{width:34px;height:34px}
+  .letter{padding:23px 18px}
+}
