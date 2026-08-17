@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>For Yosra Issa 🌹</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@500;600;700&display=swap');
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{background:#000;color:#fff;font-family:Montserrat,Arial,sans-serif}
+.scene{position:relative;width:100%;height:100svh;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,rgba(100,0,0,.34),rgba(30,0,0,.10) 32%,transparent 60%),#000}
+.header{position:absolute;top:clamp(22px,5vh,60px);left:50%;transform:translateX(-50%);width:96%;text-align:center;z-index:5}
+.pov{font-size:clamp(42px,10vw,82px);font-weight:700;color:#fff500;line-height:.8;margin-bottom:25px}
+.header h1{margin:0;color:#fff500;font-size:clamp(24px,5.8vw,52px);line-height:1.12;font-weight:700}
+.line{display:block}.line.gap{margin-top:18px}
+.stage{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);width:min(94vw,560px);height:min(53vh,510px);display:flex;align-items:center;justify-content:center;z-index:2}
+.glow{position:absolute;width:85%;height:60%;border-radius:50%;background:rgba(130,0,0,.26);filter:blur(30px);animation:pulse 2.7s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.1);opacity:.65}}
+.loader{position:absolute;width:min(310px,75vw);padding:24px 22px;border:1px solid rgba(255,70,70,.35);border-radius:20px;background:rgba(8,0,0,.88);box-shadow:0 0 35px rgba(150,0,0,.18);text-align:center;z-index:4}
+.loader .mini{font-size:42px}.loader h2{font-family:"Cormorant Garamond",serif;font-size:26px;margin:4px 0 13px}
+.progress{height:7px;background:#330000;border-radius:20px;overflow:hidden}.progress span{display:block;width:100%;height:100%;background:#ff2633;box-shadow:0 0 12px #ff2633}
+.loader p{font:12px "Cormorant Garamond",serif;margin:9px 0 17px;color:#ddd}
+button{cursor:pointer;color:#fff;font-family:Montserrat,Arial,sans-serif;font-weight:700}
+.bloom-btn{width:100%;padding:14px;border:0;border-radius:12px;background:#ff2633;box-shadow:0 5px 20px rgba(255,0,20,.25);font-size:12px}
+.flower-wrap{position:absolute;width:260px;height:390px;bottom:0;display:none;animation:appear .8s ease forwards}
+@keyframes appear{from{opacity:0;transform:translateY(30px) scale(.8)}to{opacity:1;transform:none}}
+.stem{position:absolute;left:50%;bottom:8px;width:7px;height:210px;background:linear-gradient(90deg,#063d20,#1e9b48,#064c24);border-radius:10px;transform:translateX(-50%)}
+.leaf{position:absolute;width:80px;height:29px;background:#0b6b31;border-radius:100% 0 100% 0;bottom:88px}.leaf.left{left:25px;transform:rotate(20deg)}.leaf.right{right:23px;transform:scaleX(-1) rotate(20deg)}
+.bloom{position:absolute;left:50%;bottom:192px;transform:translateX(-50%);width:210px;height:165px;animation:bloom 3.5s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes bloom{0%{transform:translateX(-50%) scale(.04);filter:blur(4px)}60%{transform:translateX(-50%) scale(1.12)}100%{transform:translateX(-50%) scale(1);filter:none}}
+.petal{position:absolute;left:50%;bottom:0;transform-origin:50% 100%;width:78px;height:118px;background:linear-gradient(145deg,#ff4540,#a80008 75%);border-radius:55% 55% 48% 48%;box-shadow:0 0 20px rgba(255,0,0,.18)}
+.p1{transform:translateX(-50%) rotate(-50deg) translateY(6px)}.p2{transform:translateX(-50%) rotate(50deg) translateY(6px)}
+.p3{transform:translateX(-50%) rotate(-26deg);width:87px;height:126px}.p4{transform:translateX(-50%) rotate(26deg);width:87px;height:126px}
+.p5{transform:translateX(-50%);width:85px;height:132px}
+.inner{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);width:80px;height:80px;border-radius:50%;background:radial-gradient(circle,#ff5148 0 25%,#a90009 72%);box-shadow:inset 0 0 20px rgba(60,0,0,.45)}
+.petal-particles{position:absolute;inset:0;pointer-events:none}.particle{position:absolute;width:5px;height:9px;border-radius:70% 30%;background:#f22;opacity:0;animation:float 3s ease-out infinite}
+.particle:nth-child(1){left:15%;top:45%;animation-delay:.4s}.particle:nth-child(2){left:78%;top:38%;animation-delay:1s}.particle:nth-child(3){left:86%;top:57%;animation-delay:1.6s}.particle:nth-child(4){left:22%;top:65%;animation-delay:2.1s}
+@keyframes float{0%{opacity:0;transform:translateY(15px) rotate(0)}25%{opacity:1}100%{opacity:0;transform:translate(50px,-105px) rotate(180deg)}}
+.final{position:absolute;left:50%;bottom:clamp(50px,9vh,105px);transform:translateX(-50%);text-align:center;width:96%;opacity:0;transition:opacity .8s;z-index:6}.final.visible{opacity:1}
+.final .small{font-size:clamp(8px,2vw,12px);letter-spacing:4px;color:#ffb8b8}.final .for{font-family:"Great Vibes",cursive;color:#f7dddd;font-size:clamp(34px,8vw,58px);margin:3px 0 10px}
+.note{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.76);backdrop-filter:blur(6px);z-index:20;padding:22px}.note.open{display:flex}
+.note-card{width:min(440px,94vw);padding:30px 24px;border-radius:23px;background:linear-gradient(145deg,#190000,#050000);border:1px solid rgba(255,70,70,.42);box-shadow:0 0 65px rgba(120,0,0,.32);text-align:center}
+.note-card h3{font-family:"Great Vibes",cursive;font-size:46px;color:#ff7b7b;margin:0 0 8px}.note-card p{font-family:"Cormorant Garamond",serif;font-size:22px;line-height:1.43;color:#eee;margin:10px 0 18px}
+.note-btn,.close{border-radius:22px;padding:10px 22px;background:rgba(55,0,0,.65);border:1px solid rgba(255,70,70,.4);font-size:11px}.close{background:#d51b27}
+.footer{position:absolute;bottom:13px;left:0;width:100%;text-align:center;color:#fff500;font-size:clamp(24px,6vw,50px);font-weight:700;z-index:4}
+.name{color:#ff6b6b}
+@media(max-height:700px){.header{top:15px}.pov{margin-bottom:12px}.header h1{font-size:23px}.stage{top:44%;height:44vh}.flower-wrap{transform:scale(.7);transform-origin:center bottom}.footer{font-size:24px;bottom:6px}}
+</style>
+</head>
+<body>
+<div class="scene">
+  <div class="header">
+    <div class="pov">POV:</div>
+    <h1>
+      <span class="line">You're a developer</span>
+      <span class="line">in love 💻❤️</span>
+      <span class="line gap">She said</span>
+      <span class="line">she loves roses 🌹</span>
+    </h1>
+  </div>
+
+  <div class="stage">
+    <div class="glow"></div>
+    <div class="loader" id="loader">
+      <div class="mini">🌷</div>
+      <h2>Loading Love</h2>
+      <div class="progress"><span></span></div>
+      <p>Ready to bloom for <b>Yosra</b> ♡</p>
+      <button class="bloom-btn" id="bloomBtn">TAP TO BLOOM FOR YOSRA ❤️</button>
+    </div>
+
+    <div class="flower-wrap" id="flower">
+      <div class="stem"></div><div class="leaf left"></div><div class="leaf right"></div>
+      <div class="bloom"><div class="petal p1"></div><div class="petal p2"></div><div class="petal p3"></div><div class="petal p4"></div><div class="petal p5"></div><div class="inner"></div></div>
+      <div class="petal-particles"><i class="particle"></i><i class="particle"></i><i class="particle"></i><i class="particle"></i></div>
+    </div>
+  </div>
+
+  <div class="final" id="final">
+    <div class="small">EVERY PETAL BLOOMS WITH LOVE</div>
+    <div class="for">for <span class="name">Yosra</span> 💗</div>
+    <button class="note-btn" id="noteBtn">💌 READ YOSRA'S NOTE</button>
+  </div>
+
+  <div class="footer">Flower 🌹 Of Emotions 🥹</div>
+</div>
+
+<div class="note" id="note">
+  <div class="note-card">
+    <h3>For Yosra 🌹</h3>
+    <p>
+      Yosra Issa, this rose was made especially for you. ❤️<br><br>
+      You said you love roses, so I wanted to give you one
+      that doesn't fade — a little flower that blooms every time
+      you open this page. 🌹<br><br>
+      <i>Every petal, every heartbeat, every little detail… for you.</i>
+    </p>
+    <button class="close" id="close">Close 🌹</button>
+  </div>
+</div>
+
+<script>
+const bloomBtn=document.getElementById('bloomBtn');
+const loader=document.getElementById('loader');
+const flower=document.getElementById('flower');
+const final=document.getElementById('final');
+const note=document.getElementById('note');
+
+bloomBtn.onclick=()=>{
+  loader.style.display='none';
+  flower.style.display='block';
+  setTimeout(()=>final.classList.add('visible'),2600);
+};
+document.getElementById('noteBtn').onclick=()=>note.classList.add('open');
+document.getElementById('close').onclick=()=>note.classList.remove('open');
+note.onclick=e=>{if(e.target===note)note.classList.remove('open')};
+</script>
+</body>
+</html>
