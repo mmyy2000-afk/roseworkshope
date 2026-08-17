@@ -1,120 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>For Yosra Issa 🌹</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@500;600;700&display=swap');
-*{box-sizing:border-box}
-html,body{margin:0;width:100%;height:100%;overflow:hidden}
-body{background:#000;color:#fff;font-family:Montserrat,Arial,sans-serif}
-.scene{position:relative;width:100%;height:100svh;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,rgba(100,0,0,.34),rgba(30,0,0,.10) 32%,transparent 60%),#000}
-.header{position:absolute;top:clamp(22px,5vh,60px);left:50%;transform:translateX(-50%);width:96%;text-align:center;z-index:5}
-.pov{font-size:clamp(42px,10vw,82px);font-weight:700;color:#fff500;line-height:.8;margin-bottom:25px}
-.header h1{margin:0;color:#fff500;font-size:clamp(24px,5.8vw,52px);line-height:1.12;font-weight:700}
-.line{display:block}.line.gap{margin-top:18px}
-.stage{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);width:min(94vw,560px);height:min(53vh,510px);display:flex;align-items:center;justify-content:center;z-index:2}
-.glow{position:absolute;width:85%;height:60%;border-radius:50%;background:rgba(130,0,0,.26);filter:blur(30px);animation:pulse 2.7s ease-in-out infinite}
-@keyframes pulse{50%{transform:scale(1.1);opacity:.65}}
-.loader{position:absolute;width:min(310px,75vw);padding:24px 22px;border:1px solid rgba(255,70,70,.35);border-radius:20px;background:rgba(8,0,0,.88);box-shadow:0 0 35px rgba(150,0,0,.18);text-align:center;z-index:4}
-.loader .mini{font-size:42px}.loader h2{font-family:"Cormorant Garamond",serif;font-size:26px;margin:4px 0 13px}
-.progress{height:7px;background:#330000;border-radius:20px;overflow:hidden}.progress span{display:block;width:100%;height:100%;background:#ff2633;box-shadow:0 0 12px #ff2633}
-.loader p{font:12px "Cormorant Garamond",serif;margin:9px 0 17px;color:#ddd}
-button{cursor:pointer;color:#fff;font-family:Montserrat,Arial,sans-serif;font-weight:700}
-.bloom-btn{width:100%;padding:14px;border:0;border-radius:12px;background:#ff2633;box-shadow:0 5px 20px rgba(255,0,20,.25);font-size:12px}
-.flower-wrap{position:absolute;width:260px;height:390px;bottom:0;display:none;animation:appear .8s ease forwards}
-@keyframes appear{from{opacity:0;transform:translateY(30px) scale(.8)}to{opacity:1;transform:none}}
-.stem{position:absolute;left:50%;bottom:8px;width:7px;height:210px;background:linear-gradient(90deg,#063d20,#1e9b48,#064c24);border-radius:10px;transform:translateX(-50%)}
-.leaf{position:absolute;width:80px;height:29px;background:#0b6b31;border-radius:100% 0 100% 0;bottom:88px}.leaf.left{left:25px;transform:rotate(20deg)}.leaf.right{right:23px;transform:scaleX(-1) rotate(20deg)}
-.bloom{position:absolute;left:50%;bottom:192px;transform:translateX(-50%);width:210px;height:165px;animation:bloom 3.5s cubic-bezier(.2,.8,.2,1) forwards}
-@keyframes bloom{0%{transform:translateX(-50%) scale(.04);filter:blur(4px)}60%{transform:translateX(-50%) scale(1.12)}100%{transform:translateX(-50%) scale(1);filter:none}}
-.petal{position:absolute;left:50%;bottom:0;transform-origin:50% 100%;width:78px;height:118px;background:linear-gradient(145deg,#ff4540,#a80008 75%);border-radius:55% 55% 48% 48%;box-shadow:0 0 20px rgba(255,0,0,.18)}
-.p1{transform:translateX(-50%) rotate(-50deg) translateY(6px)}.p2{transform:translateX(-50%) rotate(50deg) translateY(6px)}
-.p3{transform:translateX(-50%) rotate(-26deg);width:87px;height:126px}.p4{transform:translateX(-50%) rotate(26deg);width:87px;height:126px}
-.p5{transform:translateX(-50%);width:85px;height:132px}
-.inner{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);width:80px;height:80px;border-radius:50%;background:radial-gradient(circle,#ff5148 0 25%,#a90009 72%);box-shadow:inset 0 0 20px rgba(60,0,0,.45)}
-.petal-particles{position:absolute;inset:0;pointer-events:none}.particle{position:absolute;width:5px;height:9px;border-radius:70% 30%;background:#f22;opacity:0;animation:float 3s ease-out infinite}
-.particle:nth-child(1){left:15%;top:45%;animation-delay:.4s}.particle:nth-child(2){left:78%;top:38%;animation-delay:1s}.particle:nth-child(3){left:86%;top:57%;animation-delay:1.6s}.particle:nth-child(4){left:22%;top:65%;animation-delay:2.1s}
-@keyframes float{0%{opacity:0;transform:translateY(15px) rotate(0)}25%{opacity:1}100%{opacity:0;transform:translate(50px,-105px) rotate(180deg)}}
-.final{position:absolute;left:50%;bottom:clamp(50px,9vh,105px);transform:translateX(-50%);text-align:center;width:96%;opacity:0;transition:opacity .8s;z-index:6}.final.visible{opacity:1}
-.final .small{font-size:clamp(8px,2vw,12px);letter-spacing:4px;color:#ffb8b8}.final .for{font-family:"Great Vibes",cursive;color:#f7dddd;font-size:clamp(34px,8vw,58px);margin:3px 0 10px}
-.note{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.76);backdrop-filter:blur(6px);z-index:20;padding:22px}.note.open{display:flex}
-.note-card{width:min(440px,94vw);padding:30px 24px;border-radius:23px;background:linear-gradient(145deg,#190000,#050000);border:1px solid rgba(255,70,70,.42);box-shadow:0 0 65px rgba(120,0,0,.32);text-align:center}
-.note-card h3{font-family:"Great Vibes",cursive;font-size:46px;color:#ff7b7b;margin:0 0 8px}.note-card p{font-family:"Cormorant Garamond",serif;font-size:22px;line-height:1.43;color:#eee;margin:10px 0 18px}
-.note-btn,.close{border-radius:22px;padding:10px 22px;background:rgba(55,0,0,.65);border:1px solid rgba(255,70,70,.4);font-size:11px}.close{background:#d51b27}
-.footer{position:absolute;bottom:13px;left:0;width:100%;text-align:center;color:#fff500;font-size:clamp(24px,6vw,50px);font-weight:700;z-index:4}
-.name{color:#ff6b6b}
-@media(max-height:700px){.header{top:15px}.pov{margin-bottom:12px}.header h1{font-size:23px}.stage{top:44%;height:44vh}.flower-wrap{transform:scale(.7);transform-origin:center bottom}.footer{font-size:24px;bottom:6px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#070207">
+  <title>For Yosra Issa 🌹</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="scene">
-  <div class="header">
-    <div class="pov">POV:</div>
-    <h1>
-      <span class="line">You're a developer</span>
-      <span class="line">in love 💻❤️</span>
-      <span class="line gap">She said</span>
-      <span class="line">she loves roses 🌹</span>
-    </h1>
-  </div>
+  <div class="stars"></div>
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow">A LITTLE SOMETHING FOR</div>
+      <h1>Yosra Issa <span>🌹</span></h1>
+      <p id="subtitle">لأن بعض الأشياء الجميلة تستحق أن تبدأ بهدوء...</p>
+    </header>
 
-  <div class="stage">
-    <div class="glow"></div>
-    <div class="loader" id="loader">
-      <div class="mini">🌷</div>
-      <h2>Loading Love</h2>
-      <div class="progress"><span></span></div>
-      <p>Ready to bloom for <b>Yosra</b> ♡</p>
-      <button class="bloom-btn" id="bloomBtn">TAP TO BLOOM FOR YOSRA ❤️</button>
-    </div>
+    <section class="garden" aria-label="وردة تفاعلية">
+      <div class="glow"></div>
+      <div class="moon"></div>
+      <div class="ground"></div>
 
-    <div class="flower-wrap" id="flower">
-      <div class="stem"></div><div class="leaf left"></div><div class="leaf right"></div>
-      <div class="bloom"><div class="petal p1"></div><div class="petal p2"></div><div class="petal p3"></div><div class="petal p4"></div><div class="petal p5"></div><div class="inner"></div></div>
-      <div class="petal-particles"><i class="particle"></i><i class="particle"></i><i class="particle"></i><i class="particle"></i></div>
-    </div>
-  </div>
+      <svg id="rose" viewBox="0 0 500 600" aria-hidden="true">
+        <defs>
+          <radialGradient id="petal" cx="45%" cy="35%">
+            <stop offset="0" stop-color="#ff6b78"/>
+            <stop offset=".45" stop-color="#ef2340"/>
+            <stop offset="1" stop-color="#9d071e"/>
+          </radialGradient>
+          <linearGradient id="stemGradient" x1="0" x2="1">
+            <stop stop-color="#0c7b3e"/>
+            <stop offset="1" stop-color="#21a95c"/>
+          </linearGradient>
+          <filter id="blur"><feGaussianBlur stdDeviation="10"/></filter>
+          <filter id="flowerGlow">
+            <feGaussianBlur stdDeviation="2.5" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
 
-  <div class="final" id="final">
-    <div class="small">EVERY PETAL BLOOMS WITH LOVE</div>
-    <div class="for">for <span class="name">Yosra</span> 💗</div>
-    <button class="note-btn" id="noteBtn">💌 READ YOSRA'S NOTE</button>
-  </div>
+        <g id="petalGlow" opacity="0">
+          <ellipse cx="250" cy="175" rx="115" ry="85" fill="#ff1737" opacity=".35" filter="url(#blur)"/>
+        </g>
 
-  <div class="footer">Flower 🌹 Of Emotions 🥹</div>
-</div>
+        <path id="stem" d="M250 535 C247 460 252 390 250 290"
+              fill="none" stroke="url(#stemGradient)" stroke-width="12"
+              stroke-linecap="round"/>
+        <path id="leaf1" d="M249 415 C205 382 158 392 146 426 C184 441 221 435 249 415Z"
+              fill="#159447"/>
+        <path id="leaf2" d="M250 350 C291 319 338 331 350 365 C315 379 280 371 250 350Z"
+              fill="#18a04d"/>
 
-<div class="note" id="note">
-  <div class="note-card">
-    <h3>For Yosra 🌹</h3>
-    <p>
-      Yosra Issa, this rose was made especially for you. ❤️<br><br>
-      You said you love roses, so I wanted to give you one
-      that doesn't fade — a little flower that blooms every time
-      you open this page. 🌹<br><br>
-      <i>Every petal, every heartbeat, every little detail… for you.</i>
-    </p>
-    <button class="close" id="close">Close 🌹</button>
-  </div>
-</div>
+        <g id="bud" transform="translate(250 285)">
+          <path d="M-45 12 C-55 -35 -33 -78 0 -88 C33 -78 55 -35 45 12 C33 34 -33 34 -45 12Z"
+                fill="url(#petal)"/>
+          <path d="M-37 -18 C-24 -70 24 -70 37 -18 C20 -30 -20 -30 -37 -18Z"
+                fill="#ff4055" opacity=".55"/>
+          <path d="M-22 5 C-18 -32 18 -32 22 5 C12 18 -12 18 -22 5Z"
+                fill="#b90c26" opacity=".65"/>
+        </g>
 
-<script>
-const bloomBtn=document.getElementById('bloomBtn');
-const loader=document.getElementById('loader');
-const flower=document.getElementById('flower');
-const final=document.getElementById('final');
-const note=document.getElementById('note');
+        <g id="flower" transform="translate(250 205)" opacity="0">
+          <g fill="url(#petal)" filter="url(#flowerGlow)">
+            <ellipse rx="47" ry="105" transform="rotate(-62) translate(0 -42)"/>
+            <ellipse rx="47" ry="105" transform="rotate(-42) translate(0 -52)"/>
+            <ellipse rx="50" ry="110" transform="rotate(-21) translate(0 -58)"/>
+            <ellipse rx="52" ry="115" transform="translate(0 -62)"/>
+            <ellipse rx="50" ry="110" transform="rotate(21) translate(0 -58)"/>
+            <ellipse rx="47" ry="105" transform="rotate(42) translate(0 -52)"/>
+            <ellipse rx="47" ry="105" transform="rotate(62) translate(0 -42)"/>
+          </g>
+          <g fill="#ff3b50">
+            <ellipse rx="34" ry="75" transform="rotate(-38) translate(0 -30)"/>
+            <ellipse rx="34" ry="75" transform="rotate(38) translate(0 -30)"/>
+            <ellipse rx="37" ry="80" transform="translate(0 -34)"/>
+          </g>
+          <g fill="#b90b24">
+            <ellipse rx="24" ry="58" transform="rotate(-28) translate(0 -18)"/>
+            <ellipse rx="24" ry="58" transform="rotate(28) translate(0 -18)"/>
+            <ellipse rx="27" ry="61" transform="translate(0 -20)"/>
+          </g>
+          <circle r="16" fill="#ff6370"/>
+        </g>
+      </svg>
 
-bloomBtn.onclick=()=>{
-  loader.style.display='none';
-  flower.style.display='block';
-  setTimeout(()=>final.classList.add('visible'),2600);
-};
-document.getElementById('noteBtn').onclick=()=>note.classList.add('open');
-document.getElementById('close').onclick=()=>note.classList.remove('open');
-note.onclick=e=>{if(e.target===note)note.classList.remove('open')};
-</script>
+      <div id="particles"></div>
+
+      <div class="bloom-caption">
+        <span>EVERY PETAL BLOOMS WITH LOVE</span>
+        <strong>for Yosra ♥</strong>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="bloomBtn" class="primary">🌹 اضغطي لتتفتح الوردة</button>
+      <button id="noteBtn" class="secondary hidden">💌 اقرئي الرسالة</button>
+      <button id="resetBtn" class="ghost hidden">إعادة اللحظة ↻</button>
+    </section>
+
+    <section id="letter" class="letter hidden">
+      <div class="letter-flower">🌹</div>
+      <h2>إلى Yosra Issa</h2>
+      <p>يمكن للوردة أن تتفتح بلحظة، لكن بعض المشاعر تحتاج وقتًا حتى تكبر وتظهر بكل جمالها.</p>
+      <p>وجودك يشبه وردة هادئة وسط كل الضجيج؛ شيء بسيط وجميل، لكنه يترك أثرًا أكبر مما تتخيلي.</p>
+      <p>أتمنى تضل أيامك مليانة أشياء تشبه قلبك: جميلة، دافئة.</p>
+      <p>وكل مرة تشوفي فيها وردة، تذكري إن في شخص تمنى لكِ دائمًا أجمل من كل الورد. ❤️</p>
+      <p>بس احنا لازم نترك بعض لاني انا مو قادر استحمل كذب ولف ودوران اكثر من هيك بتمنالك حياه سعيده .</p>
+      <div class="signature">— For Yosra, with love 🌹 Mohammad Salem</div>
+    </section>
+
+    <footer>Made with a little code & a lot of love ♡</footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
